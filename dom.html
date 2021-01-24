@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exploring DOM</title>
     <style>
-        article{
-            border: 2px solid tomato;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 2em;
-        }
+      article {
+        border: 2px solid tomato;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 2em;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <section>
-            <h1>Exploring Dom.</h1>
-            <article id="first-article">
-                <h3 class="author">author-1</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio ipsam corporis, animi eveniet voluptatem, ducimus totam doloribus dolores consequuntur maxime! Facere, autem similique. Possimus labore molestiae eaque inventore numquam.</p>
-            </article>
-            <article class="special">
-                <h3 class="author">author-2</h3>
-                <p class="description">Fuga hic mollitia dolorem, expedita nobis voluptates? Perferendis, corrupti officia? Voluptate itaque adipisci saepe odit non, asperiores ad velit voluptas quaerat nemo at quidem vitae, maiores sapiente mollitia nobis reprehenderit?</p>
-            </article>
-            <article class="special">
-                <h3 class="author">author-3</h3>
-                <p class="description">Reprehenderit in, accusantium dolore reiciendis adipisci omnis rerum repellendus accusamus. Beatae alias ipsam, aut obcaecati autem quae consequuntur recusandae doloribus ratione harum nostrum incidunt minima nam iure ab hic distinctio!</p>
-            </article>
-        </section>
+      <section>
+        <h1>Exploring Dom.</h1>
+        <article id="first-article">
+          <h3 class="author">author-1</h3>
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            optio ipsam corporis, animi eveniet voluptatem, ducimus totam
+            doloribus dolores consequuntur maxime! Facere, autem similique.
+            Possimus labore molestiae eaque inventore numquam.
+          </p>
+        </article>
+        <article class="special">
+          <h3 class="author">author-2</h3>
+          <p class="description">
+            Fuga hic mollitia dolorem, expedita nobis voluptates? Perferendis,
+            corrupti officia? Voluptate itaque adipisci saepe odit non,
+            asperiores ad velit voluptas quaerat nemo at quidem vitae, maiores
+            sapiente mollitia nobis reprehenderit?
+          </p>
+        </article>
+        <article class="special">
+          <h3 class="author">author-3</h3>
+          <p class="description">
+            Reprehenderit in, accusantium dolore reiciendis adipisci omnis rerum
+            repellendus accusamus. Beatae alias ipsam, aut obcaecati autem quae
+            consequuntur recusandae doloribus ratione harum nostrum incidunt
+            minima nam iure ab hic distinctio!
+          </p>
+        </article>
+      </section>
     </main>
     <script>
-        var second = document.getElementsByClassName('author');
-        for (let i=0; i<second.length; i++){
-            var elements = second[i];
-            elements.style.color='red';
-            console.log(elements.innerHTML);
-        }
-        var paragraph = document.getElementsByClassName('description');
-        for (let i=0; i<paragraph.length; i++){
-            var contents = paragraph[i];
-            contents.style.color='blue';
-        }
-        var heading = document.getElementsByTagName('h1');
-        for(let i = 0; i< heading.length; i++){
-            const myHeading = heading[i];
-            myHeading.setAttribute('title', 'This is Title');
-        }
-        document.querySelector('.special h3').style.color='green';
-        var mySpecial =document.querySelectorAll('.special h3');
-        for (let i = 0;i<mySpecial.length; i++){
-            var lekhok = mySpecial[i];
-            lekhok.style.color='violet';
-        }
-        const myArticle = document.getElementById('first-article');
-        const myArticle1 = document.createElement("p");
-        myArticle1.innerHTML='This is inserted by JavaScript';
-        myArticle.appendChild(myArticle1);
+      var second = document.getElementsByClassName("author");
+      for (let i = 0; i < second.length; i++) {
+        var elements = second[i];
+        elements.style.color = "red";
+        console.log(elements.innerHTML);
+      }
+      var paragraph = document.getElementsByClassName("description");
+      for (let i = 0; i < paragraph.length; i++) {
+        var contents = paragraph[i];
+        contents.style.color = "blue";
+      }
+      var heading = document.getElementsByTagName("h1");
+      for (let i = 0; i < heading.length; i++) {
+        const myHeading = heading[i];
+        myHeading.setAttribute("title", "This is Title");
+      }
+      document.querySelector(".special h3").style.color = "green";
+      var mySpecial = document.querySelectorAll(".special h3");
+      for (let i = 0; i < mySpecial.length; i++) {
+        var lekhok = mySpecial[i];
+        lekhok.style.color = "violet";
+      }
+      const myArticle = document.getElementById("first-article");
+      const myArticle1 = document.createElement("p");
+      myArticle1.innerHTML = "This is inserted by JavaScript";
+      myArticle.appendChild(myArticle1);
     </script>
-</body>
+  </body>
 </html>

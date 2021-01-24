@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Practice Anisul</title>
+  </head>
+  <body>
+    <h1>This is heading1</h1>
+    <h1 >This is heading2</h1>
+    <p class="para">This is a Paragraph.</p>
+
+    <script>
+    //   document.getElementById("heading1").innerHTML = "Hello world";
+    //   const heading = document.getElementById("heading2");
+    //   heading.innerHTML = "Good Bye, Good Bye.";
+    //   document.getElementById("para").innerHTML = "Bye";
+
+        document.getElementsByTagName('h1')[1].innerHTML='This is the tag name selector.';
+        document.getElementsByClassName('para')[0].innerHTML='This is the class name selector.';
+        document.getElementsByTagName('h1')[0].style.color='red';
+    </script>
+  </body>
+</html>
